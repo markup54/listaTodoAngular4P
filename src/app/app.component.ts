@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Todo } from './todo';
+import { TODO } from './todos';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'miejsca4p';
+  todos: Todo[] = TODO;
+  aktualneTodo! :Todo;
+  szczeg_wyswietl(todo:Todo):void{
+      console.log(todo.nazwa);
+      this.aktualneTodo=todo;
+  }
 }
